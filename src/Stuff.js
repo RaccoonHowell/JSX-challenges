@@ -1,5 +1,3 @@
-// Create a component <Stuff> that includes all of the components so far and then use it in your <App> component:
-
 import React from "react";
 import Header from './Header';
 import Paragraph from './Paragraph';
@@ -16,3 +14,5 @@ const Stuff = () => (
 );
 
 export default Stuff;
+
+// Create a component <Stuff> that includes all of the components so far and then use it in your <App> component:
