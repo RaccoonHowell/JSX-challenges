@@ -6,10 +6,10 @@ import People from './People';
 
 const Stuff = () => (
     <React.Fragment>
-        <Header text = 'Hello, world!'/>
+        <Header text='Hello, world!'/>
         <Paragraph />
         <Square />
-        <People />
+        <People names={["James P. Sullivan", "Mike Wazowski", "Boo", "Randall Boggs", "Roz", "Fungus"]}/>
     </React.Fragment>
 );
 
