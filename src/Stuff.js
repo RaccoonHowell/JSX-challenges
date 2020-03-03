@@ -9,7 +9,7 @@ const Stuff = ({square}) => (
     <React.Fragment>
         <Header>Hello, world!</Header>
         <Paragraph></Paragraph>
-        {square ? <Square /> : null}
+        <Square color="blue" />
         <People names={["James P. Sullivan", "Mike Wazowski", "Boo", "Randall Boggs", "Roz", "Fungus"]}/>
         <Clicked />
     </React.Fragment>

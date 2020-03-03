@@ -1,23 +1,67 @@
-import React from "react";
+import React, { Component } from "react";
 
-// const divStyle = {
-//     backgroundColor: 'red',
-//     height: 200,
-//     width: 200,
-// };
+class Square extends Component {
 
-// const Square = () => (
-//       <div style = {divStyle}></div>
-// )
+    constructor(props) {
+        super(props);
 
+        this.state = {
+            clicked: false
+        };
+
+        this.handleClick = this.handleClick.bind(this);
+    }
+
+    handleClick() {
+        const current = this.state.clicked;
+
+        this.setState({
+            clicked: !current
+        })
+    }
+
+    render() {
+        const { clicked } = this.state;
+
+        const { color } = this.props;
+
+        const divStyle = {
+                backgroundColor: clicked ? color : "green",
+                height: 200,
+                width: 200,
+        };
+
+        return (
+            <div 
+                onClick={ this.handleClick }
+                style={ divStyle } 
+            />
+        );
+    }
+}
+
+/* one way of doing it
+const divStyle = {
+    backgroundColor: 'red',
+    height: 200,
+    width: 200,
+};
+
+const Square = () => (
+      <div style = {divStyle}></div>
+)
+*/
+
+/* a different way of doing it
 const Square = ({ colour }) => (
     <div style = {{ backgroundColor: colour, height: 200, width: 200 }}></div>
 );
+*/
 
+/* setting a default colour
 Square.defaultProps = {
     colour: 'green',
 };
+*/
 
 export default Square;
-
-// Create a component <Square> that displays a square <div> that is 200×200px and has a red background
