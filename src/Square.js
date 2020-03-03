@@ -4,11 +4,11 @@ import React from "react";
 //     backgroundColor: 'red',
 //     height: 200,
 //     width: 200,
-//   };
+// };
 
-//   const Square = () => (
+// const Square = () => (
 //       <div style = {divStyle}></div>
-//   )
+// )
 
 const Square = ({colour}) => (
     <div style = {{backgroundColor: colour, height: 200, width: 200}}></div>
