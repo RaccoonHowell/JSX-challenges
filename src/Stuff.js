@@ -3,6 +3,7 @@ import Header from './Header';
 import Paragraph from './Paragraph';
 import Square from './Square';
 import People from './People';
+import Clicked from './Clicked';
 
 const Stuff = ({square}) => (
     <React.Fragment>
@@ -10,11 +11,8 @@ const Stuff = ({square}) => (
         <Paragraph></Paragraph>
         {square ? <Square /> : null}
         <People names={["James P. Sullivan", "Mike Wazowski", "Boo", "Randall Boggs", "Roz", "Fungus"]}/>
+        <Clicked />
     </React.Fragment>
 );
 
 export default Stuff;
-
-// Create a component <Stuff> that includes all of the components so far and then use it in your <App> component:
-
-// Update your <Stuff> component so that it can accept a square prop, which will determine whether the <Square> component is displayed or not. This prop should default to true.
