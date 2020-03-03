@@ -14,5 +14,3 @@ class Header extends Component {
  }
 
 export default Header;
-
-// Update the <Header> and <Paragraph> components from yesterday to be class based components.
