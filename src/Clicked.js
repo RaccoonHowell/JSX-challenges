@@ -20,9 +20,9 @@ class Clicked extends Component {
         
     render() {
         return (
-            <p onClick={ this.handleClick }>
-                { this.state.clicked ? "Clicked" : "Not clicked" }
-            </p>
+            <p onClick={ this.handleClick }>{ 
+                this.state.clicked ? "Clicked" : "Not clicked" 
+            }</p>
         );
     }
 }

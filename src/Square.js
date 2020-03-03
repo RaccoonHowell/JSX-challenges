@@ -10,8 +10,8 @@ import React from "react";
 //       <div style = {divStyle}></div>
 // )
 
-const Square = ({colour}) => (
-    <div style = {{backgroundColor: colour, height: 200, width: 200}}></div>
+const Square = ({ colour }) => (
+    <div style = {{ backgroundColor: colour, height: 200, width: 200 }}></div>
 );
 
 Square.defaultProps = {
