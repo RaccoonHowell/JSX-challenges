@@ -21,13 +21,12 @@ class ToggleText extends Component {
     }
 
     render() {
-
         const { alternate, initial } = this.props;
 
         return (
             <>
-            <button onClick={ this.handleClick }>Toggle</button>
-            <p>{ this.state.clicked ?  alternate : initial }</p>
+                <button onClick={ this.handleClick }>Toggle</button>
+                <p>{ this.state.clicked ?  alternate : initial }</p>
             </>
         )
     }

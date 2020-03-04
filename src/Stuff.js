@@ -8,6 +8,8 @@ import ToggleText from './ToggleText';
 import Counter from './Counter';
 import StepCounter from './StepCounter';
 import CatchMeIfYouCan from './CatchMeIfYouCan';
+import Length from './Length';
+
 
 const Stuff = ({square}) => (
     <React.Fragment>
@@ -20,6 +22,7 @@ const Stuff = ({square}) => (
         <Counter initial={ 50 } max={ 100 } />
         <StepCounter max={ 100 } step={ 5 } />
         <CatchMeIfYouCan jump={ 100 } />
+        <Length />
     </React.Fragment>
 );
 
