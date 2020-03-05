@@ -26,7 +26,7 @@ class Square extends Component {
         const { color } = this.props;
 
         const divStyle = {
-                backgroundColor: clicked ? color : "green",
+                backgroundColor: clicked ? "green" : color,
                 height: 200,
                 width: 200,
         };
