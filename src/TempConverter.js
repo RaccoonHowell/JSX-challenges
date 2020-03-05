@@ -6,23 +6,56 @@ class TempConverter extends Component {
         super(props);
 
         this.state = {
-            celciusInput: "",
-            fahrenheitInput: ""
+            celsius: 0,
+            fahrenheit: 32
         }
+
+        this.handleFahrenheit = this.handleFahrenheit.bind(this);
+        this.handleCelsius = this.handleCelsius.bind(this);
     }
 
+    toFahrenheit(num) {
+        return num * 1.8 + 32;
+    }
 
+    toCelsius(num) {
+        return (num - 32) * 5 / 9;
+    }
+
+    handleFahrenheit(e) {
+        const value = +e.currentTarget.value;
+    
+        this.setState({
+            fahrenheit: value,
+            celsius: this.toCelsius(value)
+        })
+    }
+
+    handleCelsius(e) {
+        const value = +e.currentTarget.value;
+
+        this.setState({
+            celsius: value,
+            fahrenheit: this.toFahrenheit(value)
+        })
+    }
 
     render() {
         return(
-            <>
+            <form>
+                <label>Fahrenheit</label>
                 <input 
-                    onChange={ this.handleCelciusChange } 
+                    value={ this.state.fahrenheit }
+                    onChange={ this.handleFahrenheit } 
                     placeholder="°F" 
                 />
-                
-                <input placeholder="°C"/>
-            </>
+                <label>Celsius</label>
+                <input 
+                    value={ this.state.celsius }
+                    onChange={ this.handleCelsius }
+                    placeholder="°C"
+                />
+            </form>
         )
     }
 }
