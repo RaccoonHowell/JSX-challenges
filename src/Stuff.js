@@ -9,7 +9,8 @@ import Counter from './Counter';
 import StepCounter from './StepCounter';
 import CatchMeIfYouCan from './CatchMeIfYouCan';
 import Length from './Length';
-
+import PasswordStrength from './PasswordStrength';
+import TempConverter from './TempConverter';
 
 const Stuff = ({square}) => (
     <React.Fragment>
@@ -23,6 +24,8 @@ const Stuff = ({square}) => (
         <StepCounter max={ 100 } step={ 5 } />
         <CatchMeIfYouCan jump={ 100 } />
         <Length />
+        <PasswordStrength />
+        <TempConverter />
     </React.Fragment>
 );
 
