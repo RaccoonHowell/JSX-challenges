@@ -20,7 +20,7 @@ class StepCounter extends Component {
 
         const { max } = this.props;
 
-        const newCounter = current === max ? max : current + step;
+        const newCounter = current === +max ? +max : current + +step;
 
         this.setState({
             counter: newCounter
@@ -32,7 +32,7 @@ class StepCounter extends Component {
 
         const { step } = this.props;
 
-        const newCounter = current === 0 ? 0 : current - step;
+        const newCounter = current === 0 ? 0 : current - +step;
 
         this.setState({
             counter: newCounter

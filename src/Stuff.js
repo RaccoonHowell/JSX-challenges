@@ -29,8 +29,7 @@ const Stuff = () => (
 
             <Route path='/paragraph' component={ Paragraph } />
 
-            <Route path="/square/:color" render={ ({ match }) => ( <Square color={ match.params.color } />
-            ) } />
+            <Route path="/square/:color" render={ ({ match }) => ( <Square color={ match.params.color } /> ) } />
 
             <Route path='/people'>
                 <People names={["James P. Sullivan", "Mike Wazowski", "Boo", "Randall Boggs", "Roz", "Fungus"]}/>
@@ -46,9 +45,11 @@ const Stuff = () => (
                 <Counter initial={ 50 } max={ 100 } />
             </Route>
 
-            <Route path='/stepCounter'>
+            {/* <Route path='/stepCounter'>
                 <StepCounter max={ 100 } step={ 5 } />
-            </Route>
+            </Route> */}
+
+            <Route path="/stepCounter/:max/:step" render={ ({ match }) => ( <StepCounter max={ match.params.max } step={ match.params.step } /> ) } />
 
             <Route path='/catchMe'>
                 <CatchMeIfYouCan jump={ 100 } />
